@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Ordem Paranormal</title>
+</head>
+<body>
+    <div class="wrapper">
+        <main>
+            <div>
+                <form id="containerLogin" action="{{ url_for('login') }}" method="POST">
+                    <div id="logo">&nbsp;</div>
+                    <div id="title">Entre na sua conta</div>
+                    <input class="inputsText" type="text" name="username" id="username" placeholder="Nome de Usuário" required>
+                    <input class="inputsText" type="password" name="password" id="password" placeholder="Senha" required>
+                    <div class="msg">{{ msg }}</div>
+                    <input class="inputsButton" type="submit" value="ENTRAR">
+                </form>
+            </div>
+            <div id="containerSignin">
+                <input class="inputsButton" type="submit" value="CRIE SUA CONTA">
+            </div>
+        </main>
+    </div>
+</body>
+</html> 
